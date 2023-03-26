@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid red;
+    font-size: 2rem;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative; /* div.container like boss, all div's inside div.container will listen boss */
+    width: 75%;
+}
+
+.container div {
+    left: 50%;
+    position: absolute; /* now all div moving all together */
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@media (min-width:480px) {  /* smartphone */
+    .tablet {display: none;}
+    .laptop {display: none;}
+    .desktop {display: none;}
+    .container {
+        background-color: rgb(47, 85, 72);
+        color: burlywood;
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {  /* tablet */
+    .smartphone {display: none;}
+    .tablet {display: block;}
+    .container {
+        background-color: rgb(186, 186, 224);
+        color: blue;
+    }
+}
+
+@media (min-width:1024px) { /* laptop */
+    .tablet {display: none;}
+    .laptop {display: block;}
+    .container {
+        background-color: rgb(201, 201, 136);
+        color: rgb(144, 28, 114);
+    }
+}
+
+@media (min-width:1200px) { /* desktop */
+    .laptop {display: none;}
+    .desktop {display: block;}
+    .container {
+        background-color: pink;
+        color: rgb(70, 52, 7);
+        width: 75%;
+    }
+}
